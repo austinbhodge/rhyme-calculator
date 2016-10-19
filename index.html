@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en" ng-app="word-graphs">
+<head>
+  <meta charset="utf-8">
+
+  <title>Word Graphs</title>
+  <meta name="description" content="Graphs data about words">
+  <meta name="author" content="Austin Hodge">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body ng-controller="MainController">
+    <div class="container">    
+        <h1 style="color:white;">Rhyme Score Comparer<hr></h1>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+            <highchart id="Rhyme-Scores" config="highchartsNG"></highchart>
+                <div class="row">
+                  <div class="col-lg-6 col-lg-offset-2">
+                        <form class="form-group">
+                            <input type="text" ng-model='word' ng-enter='loadData()'> 
+                        </form>
+                        <button style="padding:16px;" class="btn btn-primary" ng-click="loadData()">Graph</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
